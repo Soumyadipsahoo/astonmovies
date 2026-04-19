@@ -1,3 +1,4 @@
+import { Send } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export function Footer() {
@@ -22,6 +23,14 @@ export function Footer() {
             <a href="#how-to" className="hover:text-gold">Install</a>
             <a href="#about" className="hover:text-gold">About</a>
             <a href="#faq" className="hover:text-gold">FAQ</a>
+            <a
+              href="https://t.me/Astonmovie_Official"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gold hover:text-gold/80"
+            >
+              <Send className="h-3.5 w-3.5" /> Telegram
+            </a>
           </nav>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Aston Movies. All rights reserved.

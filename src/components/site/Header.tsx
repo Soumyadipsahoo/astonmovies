@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Send } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const links = [
@@ -53,6 +53,15 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
+            href="https://t.me/Astonmovie_Official"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join Aston Movies on Telegram"
+            className="hidden h-10 w-10 items-center justify-center rounded-full glass text-foreground transition-all hover:text-gold hover:border-gold/40 md:inline-flex"
+          >
+            <Send className="h-4 w-4" />
+          </a>
+          <a
             href="#download"
             className="hidden items-center gap-2 rounded-full bg-gradient-gold px-5 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-105 md:inline-flex"
           >
@@ -89,6 +98,17 @@ export function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="https://t.me/Astonmovie_Official"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="mt-2 flex items-center justify-center gap-2 rounded-full glass px-4 py-2.5 text-sm font-semibold text-foreground hover:text-gold"
+              >
+                <Send className="h-4 w-4" /> Join Telegram Channel
+              </a>
+            </li>
             <li>
               <a
                 href="#download"
