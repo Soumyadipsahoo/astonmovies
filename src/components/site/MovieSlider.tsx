@@ -89,7 +89,7 @@ export function MovieSlider() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 onClick={() => setActive(m)}
-                className="group relative aspect-[2/3] w-[200px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-cinematic transition-all duration-500 hover:scale-[1.04] hover:shadow-gold sm:w-[240px] md:w-[260px]"
+                className="group relative aspect-[2/3] w-[140px] flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-cinematic transition-all duration-500 hover:scale-[1.04] hover:shadow-gold sm:w-[200px] md:w-[240px] lg:w-[260px]"
               >
                 <img
                   src={m.poster}
@@ -100,15 +100,15 @@ export function MovieSlider() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-90" />
-                <div className="absolute inset-x-0 bottom-0 p-4 text-left">
-                  <div className="mb-1 flex items-center gap-2 text-[11px] text-gold">
-                    <Star className="h-3 w-3 fill-current" />
+                <div className="absolute inset-x-0 bottom-0 p-2.5 text-left sm:p-4">
+                  <div className="mb-1 flex items-center gap-1.5 text-[10px] text-gold sm:text-[11px]">
+                    <Star className="h-2.5 w-2.5 fill-current sm:h-3 sm:w-3" />
                     {m.rating} · {m.year}
                   </div>
-                  <h3 className="font-display text-lg font-bold text-foreground">
+                  <h3 className="font-display text-sm font-bold leading-tight text-foreground sm:text-lg">
                     {m.title}
                   </h3>
-                  <p className="text-xs text-muted-foreground">{m.genre}</p>
+                  <p className="text-[10px] text-muted-foreground sm:text-xs">{m.genre}</p>
                 </div>
                 <div className="absolute right-3 top-3 rounded-full glass-gold px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-gold opacity-0 transition-opacity group-hover:opacity-100">
                   HD
