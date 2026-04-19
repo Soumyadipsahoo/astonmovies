@@ -1,4 +1,4 @@
-import { Download, Play } from "lucide-react";
+import { Download, Play, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { Particles } from "./Particles";
 
@@ -75,11 +75,13 @@ export function Hero() {
             Download App Now
           </a>
           <a
-            href="#movies"
+            href="https://t.me/Astonmovie_Official"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2 rounded-full glass px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-gold/40 hover:text-gold"
           >
-            <Play className="h-5 w-5 fill-current" />
-            Watch Trailer
+            <Send className="h-5 w-5" />
+            Join Telegram
           </a>
         </motion.div>
 
