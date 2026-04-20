@@ -59,7 +59,7 @@ export function DownloadSection() {
             >
               <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-gold p-[2px] shadow-gold-strong">
                 <div className="flex h-full w-full flex-col items-center justify-center rounded-[2.4rem] bg-card p-6">
-                  <img src={logo} alt="" width={80} height={80} className="h-20 w-20" />
+                  <img src={logo} alt="" width={80} height={80} className="h-20 w-20 rounded-full object-cover ring-2 ring-gold/40 shadow-gold" />
                   <span className="mt-3 font-display text-sm font-bold text-gradient-gold">
                     ASTON MOVIES
                   </span>
