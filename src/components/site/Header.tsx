@@ -83,17 +83,17 @@ export function Header() {
       {/* Mobile menu */}
       <div
         className={`md:hidden transition-all duration-300 ${
-          open ? "max-h-96 opacity-100" : "pointer-events-none max-h-0 opacity-0"
+          open ? "max-h-[28rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
         }`}
       >
-        <div className="mx-3 mt-2 rounded-2xl glass p-4">
+        <div className="mx-3 mt-2 overflow-hidden rounded-2xl border border-gold/30 bg-background p-4 shadow-cinematic">
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2 text-sm text-foreground/90 hover:bg-gold/10 hover:text-gold"
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-gold/10 hover:text-gold"
                 >
                   {l.label}
                 </a>
@@ -105,7 +105,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="mt-2 flex items-center justify-center gap-2 rounded-full glass px-4 py-2.5 text-sm font-semibold text-foreground hover:text-gold"
+                className="mt-2 flex items-center justify-center gap-2 rounded-full border border-gold/40 bg-card px-4 py-2.5 text-sm font-semibold text-foreground hover:text-gold"
               >
                 <Send className="h-4 w-4" /> Join Telegram Channel
               </a>
