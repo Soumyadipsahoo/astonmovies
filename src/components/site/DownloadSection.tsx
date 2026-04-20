@@ -26,7 +26,7 @@ export function DownloadSection() {
                 Download <span className="text-gradient-gold">Aston Movies</span> APK
               </h2>
               <p className="mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
-                A premium cinematic streaming experience packed into one lightweight Android
+                A premium cinematic download experience packed into one lightweight Android
                 app. No ads. No sign-ups. Just movies.
               </p>
 
