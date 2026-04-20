@@ -4,8 +4,8 @@ import { Film, Globe2, Tv, Sparkles, Clapperboard, Languages } from "lucide-reac
 const cards = [
   {
     icon: Sparkles,
-    title: "Movies Streaming App",
-    desc: "Aston Movies brings the ultimate streaming experience — a hand-curated catalog of films and shows, all in stunning HD, anywhere on your Android device.",
+    title: "Movies Download App",
+    desc: "Aston Movies brings the ultimate download experience — a hand-curated catalog of films and shows, all in stunning HD, anywhere on your Android device.",
   },
   {
     icon: Globe2,

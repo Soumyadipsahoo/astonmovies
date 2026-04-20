@@ -13,7 +13,7 @@ export function Footer() {
                 ASTON MOVIES
               </p>
               <p className="text-xs text-muted-foreground">
-                Premium cinematic streaming, made for Android.
+                Premium cinematic downloads, made for Android.
               </p>
             </div>
           </div>

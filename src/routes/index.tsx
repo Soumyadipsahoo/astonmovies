@@ -12,24 +12,24 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aston Movies — Watch Unlimited HD Movies on Android" },
+      { title: "Aston Movies — Download Unlimited HD Movies on Android" },
       {
         name: "description",
         content:
-          "Download Aston Movies APK to stream unlimited Hollywood, Bollywood, Tollywood movies, web series and TV shows in HD on Android. Free, ad-light, premium.",
+          "Download Aston Movies APK for unlimited Hollywood, Bollywood, Tollywood movies, web series and TV shows in HD on Android. Free, ad-light, premium downloads.",
       },
-      { property: "og:title", content: "Aston Movies — Premium HD Streaming for Android" },
+      { property: "og:title", content: "Aston Movies — Premium HD Downloads for Android" },
       {
         property: "og:description",
         content:
-          "Unlimited movies, web series and TV shows in HD. Download the official Aston Movies APK now.",
+          "Unlimited movie downloads, web series and TV shows in HD. Get the official Aston Movies APK now.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Aston Movies — HD Streaming App" },
+      { name: "twitter:title", content: "Aston Movies — HD Movie Download App" },
       {
         name: "twitter:description",
-        content: "Stream Hollywood, Bollywood, Tollywood and more — free on Android.",
+        content: "Download Hollywood, Bollywood, Tollywood movies and more — free on Android.",
       },
     ],
   }),
