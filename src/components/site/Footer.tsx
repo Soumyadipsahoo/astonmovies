@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Aston Movies" width={32} height={32} className="h-8 w-8" />
+            <img src={logo} alt="Aston Movies" width={32} height={32} className="h-8 w-8 rounded-full object-cover ring-1 ring-gold/40" />
             <div>
               <p className="font-display text-sm font-bold text-gradient-gold">
                 ASTON MOVIES

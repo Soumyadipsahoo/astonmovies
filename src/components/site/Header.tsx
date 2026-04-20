@@ -33,7 +33,7 @@ export function Header() {
         }`}
       >
         <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Aston Movies logo" width={36} height={36} className="h-9 w-9" />
+          <img src={logo} alt="Aston Movies logo" width={36} height={36} className="h-9 w-9 rounded-full object-cover ring-1 ring-gold/40" />
           <span className="font-display text-lg font-bold tracking-wider text-gradient-gold">
             ASTON
           </span>
