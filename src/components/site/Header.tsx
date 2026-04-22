@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Download, Send } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { APK_DOWNLOAD_URL } from "@/lib/constants";
 
 const links = [
   { href: "#movies", label: "Movies" },
@@ -62,8 +63,10 @@ export function Header() {
             <Send className="h-4 w-4" />
           </a>
           <a
-            href="#download"
-            className="hidden items-center gap-2 rounded-full bg-gradient-gold px-5 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-105 md:inline-flex"
+            href={APK_DOWNLOAD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 rounded-full bg-gradient-gold px-5 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--gold)/0.55)] md:inline-flex"
           >
             <Download className="h-4 w-4" />
             Download
@@ -112,12 +115,17 @@ export function Header() {
             </li>
             <li>
               <a
-                href="#download"
+                href={APK_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="mt-2 flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-gold-foreground shadow-gold"
+                className="mt-2 flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-gold-foreground shadow-gold transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_30px_hsl(var(--gold)/0.55)]"
               >
                 <Download className="h-4 w-4" /> Download App
               </a>
+              <p className="mt-1 text-center text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                Safe APK · No Virus · Verified
+              </p>
             </li>
           </ul>
         </div>
