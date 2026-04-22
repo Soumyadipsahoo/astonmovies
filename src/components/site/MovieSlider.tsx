@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Clock, Download, Play, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { movies, type Movie } from "@/data/movies";
+import { APK_DOWNLOAD_URL } from "@/lib/constants";
 
 export function MovieSlider() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -190,10 +191,13 @@ function MovieModal({ movie, onClose }: { movie: Movie | null; onClose: () => vo
               </p>
               <div className="mt-1 flex flex-col gap-2 sm:mt-2 sm:flex-row sm:gap-3">
                 <a
-                  href="#download"
-                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-gold px-3 py-2 text-[11px] font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-105 sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
+                  href={APK_DOWNLOAD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-gold px-3 py-2 text-[11px] font-semibold text-gold-foreground shadow-gold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--gold)/0.55)] sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
                 >
                   <Download className="h-3 w-3 sm:h-4 sm:w-4" /> Download in App
+                </a>
                 </a>
                 <button
                   type="button"
