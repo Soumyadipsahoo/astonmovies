@@ -1,6 +1,7 @@
 import { Download, ShieldCheck, Zap, HardDrive } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import { APK_DOWNLOAD_URL } from "@/lib/constants";
 
 export function DownloadSection() {
   return (
@@ -38,9 +39,10 @@ export function DownloadSection() {
 
               <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                 <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-8 py-4 text-base font-bold text-gold-foreground shadow-gold-strong animate-gold-pulse transition-transform hover:scale-105"
+                  href={APK_DOWNLOAD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-8 py-4 text-base font-bold text-gold-foreground shadow-gold-strong animate-gold-pulse transition-all duration-300 hover:scale-105 hover:shadow-[0_0_45px_hsl(var(--gold)/0.65)]"
                 >
                   <Download className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
                   Download APK Now
@@ -49,6 +51,9 @@ export function DownloadSection() {
                   Android 6.0+ · Updated April 2026
                 </span>
               </div>
+              <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.2em] text-gold/90">
+                Safe APK · No Virus · Verified
+              </p>
             </div>
 
             {/* Phone mockup */}
