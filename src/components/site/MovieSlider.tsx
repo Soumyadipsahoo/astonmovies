@@ -198,7 +198,6 @@ function MovieModal({ movie, onClose }: { movie: Movie | null; onClose: () => vo
                 >
                   <Download className="h-3 w-3 sm:h-4 sm:w-4" /> Download in App
                 </a>
-                </a>
                 <button
                   type="button"
                   className="inline-flex items-center justify-center gap-1.5 rounded-full glass px-3 py-2 text-[11px] font-semibold text-foreground hover:text-gold sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
