@@ -141,7 +141,7 @@ function MovieModal({ movie, onClose }: { movie: Movie | null; onClose: () => vo
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 p-3 backdrop-blur-md sm:p-4"
           onClick={onClose}
         >
           <motion.div
@@ -150,57 +150,56 @@ function MovieModal({ movie, onClose }: { movie: Movie | null; onClose: () => vo
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative grid w-full max-w-4xl overflow-hidden rounded-3xl glass shadow-cinematic md:grid-cols-[300px_1fr]"
+            className="relative grid max-h-[90vh] w-full max-w-4xl grid-cols-[110px_1fr] overflow-hidden rounded-2xl glass shadow-cinematic sm:rounded-3xl md:grid-cols-[300px_1fr]"
           >
             <button
               onClick={onClose}
               aria-label="Close"
-              className="absolute right-4 top-4 z-10 rounded-full glass p-2 text-foreground transition-colors hover:text-gold"
+              className="absolute right-2 top-2 z-10 rounded-full glass p-1.5 text-foreground transition-colors hover:text-gold sm:right-4 sm:top-4 sm:p-2"
             >
-              <X className="h-5 w-5" />
+              <X className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
-            <div className="relative aspect-[2/3] md:aspect-auto">
+            <div className="relative">
               <img
                 src={movie.poster}
                 alt={movie.title}
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent md:bg-gradient-to-r" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/60 md:to-transparent" />
             </div>
-            <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
-              <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1 text-gold">
-                  <Star className="h-3.5 w-3.5 fill-current" /> {movie.rating}
+            <div className="flex max-h-[90vh] flex-col justify-center gap-2 overflow-y-auto p-3 sm:gap-4 sm:p-8">
+              <div className="flex flex-wrap items-center gap-1.5 text-[10px] text-muted-foreground sm:gap-3 sm:text-xs">
+                <span className="flex items-center gap-0.5 text-gold sm:gap-1">
+                  <Star className="h-2.5 w-2.5 fill-current sm:h-3.5 sm:w-3.5" /> {movie.rating}
                 </span>
                 <span>·</span>
                 <span>{movie.year}</span>
-                <span>·</span>
-                <span className="flex items-center gap-1">
+                <span className="hidden sm:inline">·</span>
+                <span className="hidden items-center gap-1 sm:flex">
                   <Clock className="h-3.5 w-3.5" /> {movie.duration}
                 </span>
-                <span>·</span>
-                <span className="rounded-full glass-gold px-2 py-0.5 text-gold">
+                <span className="rounded-full glass-gold px-1.5 py-0.5 text-[9px] text-gold sm:px-2 sm:text-xs">
                   {movie.genre}
                 </span>
               </div>
-              <h3 className="font-display text-3xl font-bold sm:text-4xl">
+              <h3 className="font-display text-base font-bold leading-tight sm:text-4xl">
                 <span className="text-gradient-gold">{movie.title}</span>
               </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <p className="line-clamp-3 text-[11px] leading-relaxed text-muted-foreground sm:line-clamp-none sm:text-base">
                 {movie.description}
               </p>
-              <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-1 flex flex-col gap-2 sm:mt-2 sm:flex-row sm:gap-3">
                 <a
                   href="#download"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-gold px-3 py-2 text-[11px] font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-105 sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
                 >
-                  <Download className="h-4 w-4" /> Download in App
+                  <Download className="h-3 w-3 sm:h-4 sm:w-4" /> Download in App
                 </a>
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground hover:text-gold"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full glass px-3 py-2 text-[11px] font-semibold text-foreground hover:text-gold sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
                 >
-                  <Play className="h-4 w-4 fill-current" /> Watch Trailer
+                  <Play className="h-3 w-3 fill-current sm:h-4 sm:w-4" /> Watch Trailer
                 </button>
               </div>
             </div>
