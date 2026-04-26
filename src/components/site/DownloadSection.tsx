@@ -32,8 +32,8 @@ export function DownloadSection() {
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3 text-xs">
-                <Tag icon={<HardDrive className="h-3.5 w-3.5" />} label="32 MB" />
-                <Tag icon={<Zap className="h-3.5 w-3.5" />} label="v3.4.1" />
+                <Tag icon={<HardDrive className="h-3.5 w-3.5" />} label="10 MB" />
+                <Tag icon={<Zap className="h-3.5 w-3.5" />} label="v1.0.0" />
                 <Tag icon={<ShieldCheck className="h-3.5 w-3.5" />} label="Safe & Verified" />
               </div>
 
