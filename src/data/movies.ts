@@ -1,11 +1,10 @@
-import poster1 from "@/assets/poster-1.jpg";
-import poster2 from "@/assets/poster-2.jpg";
-import poster3 from "@/assets/poster-3.jpg";
-import poster4 from "@/assets/poster-4.jpg";
-import poster5 from "@/assets/poster-5.jpg";
-import poster6 from "@/assets/poster-6.jpg";
-import poster7 from "@/assets/poster-7.jpg";
-import poster8 from "@/assets/poster-8.jpg";
+import youth from "@/assets/movies/youth.jpg";
+import withLove from "@/assets/movies/with-love.jpg";
+import dhurandhar from "@/assets/movies/dhurandhar.jpg";
+import dhurandharRevenge from "@/assets/movies/dhurandhar-revenge.jpg";
+import toxic from "@/assets/movies/toxic.jpg";
+import apex from "@/assets/movies/apex.jpg";
+import hailMary from "@/assets/movies/hail-mary.jpg";
 
 export type Movie = {
   id: string;
@@ -21,90 +20,79 @@ export type Movie = {
 export const movies: Movie[] = [
   {
     id: "1",
-    title: "Ember of Dawn",
-    poster: poster1,
-    rating: 8.7,
-    genre: "Action / Thriller",
-    duration: "2h 18m",
-    year: 2024,
+    title: "Project Hail Mary",
+    poster: hailMary,
+    rating: 8.2,
+    genre: "Sci-Fi / Adventure",
+    duration: "2h 37m",
+    year: 2026,
     description:
-      "A lone warrior rises from the ashes to reclaim a forgotten kingdom in a fiery battle of fate and vengeance.",
+      "Science teacher Ryland Grace wakes up on a spaceship light years from home with no memory of his mission — to solve the riddle of a mysterious substance killing the sun and save Earth from extinction.",
   },
   {
     id: "2",
-    title: "Orbit Zero",
-    poster: poster2,
-    rating: 9.1,
-    genre: "Sci-Fi / Adventure",
-    duration: "2h 32m",
-    year: 2024,
+    title: "Dhurandhar",
+    poster: dhurandhar,
+    rating: 7.1,
+    genre: "Action / Crime",
+    duration: "3h 32m",
+    year: 2025,
     description:
-      "An astronaut stranded beyond the edge of the solar system must outwit an unknown intelligence to find his way home.",
+      "A mysterious traveler slips into the heart of Karachi's underbelly and rises through its ranks with lethal precision, only to tear the notorious ISI-Underworld nexus apart from within.",
   },
   {
     id: "3",
-    title: "Neon Verdict",
-    poster: poster3,
-    rating: 8.4,
-    genre: "Crime / Cyberpunk",
-    duration: "1h 58m",
-    year: 2024,
+    title: "Dhurandhar: The Revenge",
+    poster: dhurandharRevenge,
+    rating: 7.6,
+    genre: "Action / Crime",
+    duration: "3h 49m",
+    year: 2026,
     description:
-      "In a rain-soaked city of gold and neon, a hacker uncovers a conspiracy that could reshape the future.",
+      "As rival gangs, corrupt officials and a ruthless Major Iqbal close in, Hamza's mission for his country spirals into a bloody personal war on the streets of Lyari.",
   },
   {
     id: "4",
-    title: "Blade of Eternity",
-    poster: poster4,
-    rating: 8.9,
-    genre: "Fantasy / Epic",
-    duration: "2h 45m",
-    year: 2024,
+    title: "Toxic",
+    poster: toxic,
+    rating: 7.5,
+    genre: "Action / Thriller",
+    duration: "3h 15m",
+    year: 2026,
     description:
-      "A chosen warrior wields the legendary blade to defend his people from an ancient awakening.",
+      "Set in a bygone era, this gripping tale unfolds in the coastal paradise of Goa — where a powerful drug cartel pulls the strings behind a facade of sun-soaked beaches and vibrant culture.",
   },
   {
     id: "5",
-    title: "Golden Hour",
-    poster: poster5,
-    rating: 8.2,
-    genre: "Romance / Drama",
-    duration: "1h 52m",
-    year: 2024,
+    title: "Apex",
+    poster: apex,
+    rating: 6.4,
+    genre: "Thriller / Action",
+    duration: "1h 36m",
+    year: 2026,
     description:
-      "Two souls collide one perfect summer evening — a love story written in the colors of the setting sun.",
+      "A grieving woman pushing her limits on a solo adventure in the Australian wild is ensnared in a twisted game with a cunning killer who thinks she's prey.",
   },
   {
     id: "6",
-    title: "Midnight Lantern",
-    poster: poster6,
-    rating: 8.5,
-    genre: "Noir / Mystery",
-    duration: "2h 04m",
-    year: 2024,
+    title: "Youth",
+    poster: youth,
+    rating: 7.3,
+    genre: "Comedy / Romance",
+    duration: "2h 21m",
+    year: 2026,
     description:
-      "A weary detective walks the foggy streets searching for a truth no one wants found.",
+      "Praveen, a 15-year-old boy, enters adolescence determined to find true love before school ends. Through heartbreaks and friendships he slowly discovers what love really means.",
   },
   {
     id: "7",
-    title: "The Hollow Forest",
-    poster: poster7,
-    rating: 7.9,
-    genre: "Horror / Suspense",
-    duration: "1h 46m",
-    year: 2024,
+    title: "With Love",
+    poster: withLove,
+    rating: 6.7,
+    genre: "Romance / Comedy",
+    duration: "2h 21m",
+    year: 2026,
     description:
-      "A traveler ventures into a forest where light bleeds gold and nothing that enters returns the same.",
-  },
-  {
-    id: "8",
-    title: "Toxic Reign",
-    poster: poster8,
-    rating: 9.3,
-    genre: "Action / Bollywood Epic",
-    duration: "2h 56m",
-    year: 2024,
-    description:
-      "From the dust of a forgotten gold mine rises a legend who will burn empires to take the throne.",
+      "Sathya reluctantly agrees to a blind date arranged by his sister and meets Monisha. They discover they attended the same school years ago, bonding over shared memories and old crushes.",
   },
 ];
