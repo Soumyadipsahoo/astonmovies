@@ -8,6 +8,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { APK_DOWNLOAD_URL } from "@/lib/constants";
+import { DownloadButton } from "./DownloadButton";
 
 const steps = [
   {
@@ -113,14 +114,12 @@ export function HowToInstall() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <a
-            href={APK_DOWNLOAD_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-8 py-4 text-sm font-bold text-gold-foreground shadow-gold-strong transition-all duration-300 hover:scale-105 hover:shadow-[0_0_45px_hsl(var(--gold)/0.65)]"
+          <DownloadButton
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-8 py-4 text-sm font-bold text-gold-foreground shadow-gold-strong transition-all duration-300 hover:scale-105 hover:shadow-[0_0_45px_hsl(var(--gold)/0.65)] data-[loading=true]:pointer-events-none data-[loading=true]:opacity-80"
+            hideIcon
           >
             Download App Now
-          </a>
+          </DownloadButton>
           <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.2em] text-gold/90">
             Safe APK · No Virus · Verified
           </p>

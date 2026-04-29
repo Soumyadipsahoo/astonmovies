@@ -2,6 +2,7 @@ import { Download, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { Particles } from "./Particles";
 import { APK_DOWNLOAD_URL } from "@/lib/constants";
+import { DownloadButton } from "./DownloadButton";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export function Hero() {
@@ -74,15 +75,12 @@ export function Hero() {
           className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4"
         >
           <div className="flex flex-col items-center gap-1.5">
-            <a
-              href={APK_DOWNLOAD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-6 py-3.5 text-sm font-semibold text-gold-foreground shadow-gold-strong animate-gold-pulse transition-all duration-300 hover:scale-[1.06] hover:shadow-[0_0_40px_hsl(var(--gold)/0.6)] sm:px-8 sm:py-4 sm:text-base"
+            <DownloadButton
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-6 py-3.5 text-sm font-semibold text-gold-foreground shadow-gold-strong animate-gold-pulse transition-all duration-300 hover:scale-[1.06] hover:shadow-[0_0_40px_hsl(var(--gold)/0.6)] data-[loading=true]:pointer-events-none data-[loading=true]:opacity-80 sm:px-8 sm:py-4 sm:text-base"
+              iconClassName="h-5 w-5 transition-transform group-hover:translate-y-0.5"
             >
-              <Download className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
               Download App Now
-            </a>
+            </DownloadButton>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               Safe APK · No Virus · Verified
             </span>
