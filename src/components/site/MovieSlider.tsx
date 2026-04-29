@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Star, Clock, Download, Play, X } from "lucid
 import { motion, AnimatePresence } from "framer-motion";
 import { movies, type Movie } from "@/data/movies";
 import { APK_DOWNLOAD_URL } from "@/lib/constants";
+import { DownloadButton } from "./DownloadButton";
 
 export function MovieSlider() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -190,14 +191,12 @@ function MovieModal({ movie, onClose }: { movie: Movie | null; onClose: () => vo
                 {movie.description}
               </p>
               <div className="mt-1 flex flex-col gap-2 sm:mt-2 sm:flex-row sm:gap-3">
-                <a
-                  href={APK_DOWNLOAD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-gold px-3 py-2 text-[11px] font-semibold text-gold-foreground shadow-gold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--gold)/0.55)] sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
+                <DownloadButton
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-gold px-3 py-2 text-[11px] font-semibold text-gold-foreground shadow-gold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--gold)/0.55)] data-[loading=true]:pointer-events-none data-[loading=true]:opacity-80 sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
+                  iconClassName="h-3 w-3 sm:h-4 sm:w-4"
                 >
-                  <Download className="h-3 w-3 sm:h-4 sm:w-4" /> Download in App
-                </a>
+                  Download in App
+                </DownloadButton>
                 <button
                   type="button"
                   className="inline-flex items-center justify-center gap-1.5 rounded-full glass px-3 py-2 text-[11px] font-semibold text-foreground hover:text-gold sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"

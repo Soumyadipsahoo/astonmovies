@@ -2,6 +2,7 @@ import { Download, ShieldCheck, Zap, HardDrive } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 import { APK_DOWNLOAD_URL } from "@/lib/constants";
+import { DownloadButton } from "./DownloadButton";
 
 export function DownloadSection() {
   return (
@@ -38,15 +39,12 @@ export function DownloadSection() {
               </div>
 
               <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-                <a
-                  href={APK_DOWNLOAD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-8 py-4 text-base font-bold text-gold-foreground shadow-gold-strong animate-gold-pulse transition-all duration-300 hover:scale-105 hover:shadow-[0_0_45px_hsl(var(--gold)/0.65)]"
+                <DownloadButton
+                  className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-gold px-8 py-4 text-base font-bold text-gold-foreground shadow-gold-strong animate-gold-pulse transition-all duration-300 hover:scale-105 hover:shadow-[0_0_45px_hsl(var(--gold)/0.65)] data-[loading=true]:pointer-events-none data-[loading=true]:opacity-80"
+                  iconClassName="h-5 w-5 transition-transform group-hover:translate-y-0.5"
                 >
-                  <Download className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
                   Download APK Now
-                </a>
+                </DownloadButton>
                 <span className="text-xs text-muted-foreground">
                   Android 6.0+ · Updated April 2026
                 </span>
