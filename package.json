@@ -9,7 +9,9 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check:assets": "node scripts/check-asset-sizes.mjs",
+    "predeploy": "bun run build && node scripts/check-asset-sizes.mjs"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
